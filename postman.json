@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "cfc07b07-faee-4722-bf85-6c022f7d3b61",
+		"name": "Zup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Apostar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"nirlleycosta@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apostas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apostas"
+					]
+				},
+				"description": "Cria uma aposta para um e-mail."
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar apostas por e-mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/apostas?email=nirlleycosta@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apostas"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nirlleycosta@gmail.com"
+						}
+					]
+				},
+				"description": "Pesquisa as apostas criadas para um apostador."
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar apostas por número",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/apostas?numeros=7,10,33,40,50,57",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apostas"
+					],
+					"query": [
+						{
+							"key": "numeros",
+							"value": "7,10,33,40,50,57"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
